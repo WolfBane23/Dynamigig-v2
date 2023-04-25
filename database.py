@@ -60,12 +60,11 @@ def add_application_to_db(job_id, data):
 
 def add_job_to_db(data):
   with engine.connect() as conn:
-    query = text("""INSERT INTO jobs ( id,title, location, salary, 
+    query = text("""INSERT INTO jobs ( title, location, salary, 
       currency, responsibilities, requirements) 
-      VALUES(:id ,:title, :location, :salary, :currency, :responsibilities, 
+      VALUES(:title, :location, :salary, :currency, :responsibilities, 
       :requirements)""")
     params = {
-      'id': data['id'],
       'title': data['title'],
       'location': data['location'],
       'salary': data['salary'],
