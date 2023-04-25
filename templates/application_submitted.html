@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <title>Application Submitted</title>
+    {% include 'bootstrap.html' %}  
+  </head>
+  <body>
+    {% include "nav.html" %}
+    {% include "banner2.html" %}
+    <div class='container'>
+        <h1 class='text-center mt-2 mb-4'>
+          Dynamigig
+        </h1> 
+    <p><b>* Your application for '{{job['title']}}' at Dynamigig has been submitted</b></p>  
+    
+      <h4 class="mb-0">Full Name</h4>
+    <div class="mb-4">{{application['full_name']}}</div>
+
+    <h4 class="mb-0">Email</h4>
+    <div class="mb-4">{{application['email']}}</div>
+
+    <h4 class="mb-0">Linkedin</h4></h4>
+    <div class="mb-4">{{application['linkedin']}}</div>
+
+    <h4 class="mb-0">Education</h4>
+    <div class="mb-4">{{application['education']}}</div>
+
+    <h4 class="mb-0">Work Experience</h4>
+    <div class="mb-4">{{application['workexp']}}</div>
+
+    <h4 class="mb-0">Resume Link</h4>
+    <div class="mb-4">{{application['resumelink']}}</div>
+  </div>
+    {%include 'footer.html' %} 
+  </body>
+</html>  

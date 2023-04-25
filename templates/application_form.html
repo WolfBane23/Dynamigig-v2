@@ -1,0 +1,39 @@
+<h3>Application Form</h3><br>
+<form method = "post" action="/job/{{job['id']}}/apply" class="row g-3">
+  
+  <div class="col-md-6">
+    <label for="inputName4" class="form-label"><b>Name</b></label>
+    <input type="text" required name="full_name" class="form-control" id="inputName4" placeholder="Monkey D Luffy">
+  </div>
+  
+  <div class="col-md-6">
+    <label for="inputEmaild4" class="form-label"><b>Email</b></label>
+    <input type="Email" required name="email" class="form-control" id="inputEmail4">
+  </div>
+  
+  <div class="col-12">
+    <label for="inputLinkedin" class="form-label"><b>Linkedin</b></label>
+    <input type="text" name="linkedin" class="form-control" id="inputLinkedin" placeholder="https://www.linkedin.com/in/Zoro">
+  </div>
+  
+  <div class="col-12">
+    <label for="inputEducation" class="form-label"><b>Education</b></label>
+    <input type="text" name="education" class="form-control" id="inputEducation" placeholder="UG,PG etc">
+  </div>
+  
+  <div class="col-md-6">
+    <label for="inputWE" class="form-label"><b>Work Experience</b></label>
+    <input type="text" name="workexp" class="form-control" id="inputWE">
+  </div>
+  
+  <div class="col-md-4">
+    <label for="inputRL" class="form-label"><b>Resume Link</b></label>
+    <input type="text" name="resumelink" class="form-control" id="inputRL">
+    </select>
+  </div>
+  
+  <div class="col-12">
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </div>
+  
+</form>

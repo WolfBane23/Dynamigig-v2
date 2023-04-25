@@ -6,7 +6,7 @@
   </head>
   <body>
     {% include "nav.html" %}
-    {% include "banner.html" %}
+    {% include "banner2.html" %}
      <div class='container'>
         <h1 class='text-center mt-2 mb-4'>
           Dynamigig
@@ -28,6 +28,8 @@
         <p>{{job.requirements}}</p>
         <h4>Salary</h4>
         <p>{{job.currency}}{{job.salary}}</p>
+        <br><br>
+        {% include 'application_form.html' %}
      </div>
     {%include 'footer.html' %}
   </body>
