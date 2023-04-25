@@ -17,7 +17,7 @@ def load_jobs_from_db():
       ))
     jobs = []
     for row in result.fetchall():
-      counselor = {
+      job = {
         'id': row[0],
         'title': row[1],
         'location': row[2],
@@ -26,5 +26,15 @@ def load_jobs_from_db():
         'responsibilities': row[5],
         'requirements': row[6]
       }
-      jobs.append(counselor)
+      jobs.append(job)
     return jobs
+
+
+def load_job_from_db(id):
+  with engine.connect() as conn:
+    result = conn.execute(text(f"SELECT * FROM jobs WHERE id = {id}"), )
+    rows = result.all()
+    if len(rows) == 0:
+      return None
+    else:
+      return rows[0]._mapping
