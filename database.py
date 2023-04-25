@@ -56,3 +56,21 @@ def add_application_to_db(job_id, data):
       'resume_url': data['resumelink']
     }
     conn.execute(query, params)
+
+
+def add_job_to_db(data):
+  with engine.connect() as conn:
+    query = text("""INSERT INTO jobs ( id,title, location, salary, 
+      currency, responsibilities, requirements) 
+      VALUES(:id ,:title, :location, :salary, :currency, :responsibilities, 
+      :requirements)""")
+    params = {
+      'id': data['id'],
+      'title': data['title'],
+      'location': data['location'],
+      'salary': data['salary'],
+      'currency': data['currency'],
+      'responsibilities': data['responsibilities'],
+      'requirements': data['requirements']
+    }
+    conn.execute(query, params)

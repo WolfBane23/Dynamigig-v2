@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Post a Job</title>
+    {% include 'bootstrap.html' %}
+    
+  </head>
+  <body>
+     {% include 'nav.html' %}
+     {% include 'banner2.html' %}
+      <div class='container'>
+
+        
+          <h3 class="text-center mb-4 mt-4"><b>Post a JOB</b></h3><br><br>
+        <form action="/job-posted" method = 'post' class="row g-3 mb-4">
+          
+          <div class="col-md-2">
+            <label for="inputEmaild4" class="form-label"><b>JOB ID</b></label>
+            <input type="text" required name="id" class="form-control" id="id">
+          </div>
+          
+          <div class="col-md-9">
+            <label for="inputEmaild4" class="form-label"><b></b></label>
+            
+          </div>
+          
+          <div class="col-md-6">
+            <label for="inputName4" class="form-label"><b>Title</b></label>
+            <input type="text" required name="title" class="form-control" id="title">
+          </div>
+          
+          <div class="col-md-6">
+            <label for="inputEmaild4" class="form-label"><b>location</b></label>
+            <input type="text" required name="location" class="form-control" id="location">
+          </div>
+          
+          <div class="col-6">
+            <label for="inputLinkedin" class="form-label"><b>Currency</b></label>
+            <input type="text" required name="currency" class="form-control" id="currency" placeholder="Rs. , $, etc">
+          </div>
+          
+          <div class="col-6">
+            <label for="inputEducation" class="form-label"><b>Salary</b></label>
+            <input type="text" required name="salary" class="form-control" id="salary">
+          </div>
+          
+          <div class="col-md-12">
+            <label for="inputWE" class="form-label"><b>Requirements</b></label>
+            <textarea required name="requirements" class="form-control" id="requirements"></textarea>
+          </div>
+          
+          <div class="col-md-12">
+            <label for="inputRL" class="form-label"><b>Responsibilities</b></label>
+            <textarea required name="responsibilities" class="form-control" id="responsibilities"></textarea>
+          </div>
+          
+          <div class="col-12 text-center mb-4 mt-4">
+            <button type="submit" class="btn btn-primary">Post</button>
+          </div>
+          
+        </form>
+        <hr>
+
+
+
+
+
+
+
+
+
+
+        
+    
+      <div class = 'text-center'>
+        <a href="https://www.pussyspace.net" type='button' class="btn btn-outline-primary">Contact Us</a>
+      </div>  
+    </div> 
+    {% include 'footer.html' %}
+  </body>
+</html> 
